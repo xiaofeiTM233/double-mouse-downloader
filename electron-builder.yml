@@ -10,6 +10,11 @@ win:
       arch:
         - x64
 
+mac:
+  target:
+    - target: dmg
+    - target: 7z
+
 directories:
   buildResources: ./build-resources
 

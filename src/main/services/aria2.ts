@@ -33,7 +33,7 @@ export async function initAria2cRpc() {
     spawn.stdout.on('data', (buf: Buffer) => {
       const msg = buf.toString('utf-8');
 
-      if (msg.includes('IPv4 RPC: listening on TCP port')) {
+      if (msg.includes('listening on') || msg.includes('正在监听')) {
         resolve(undefined);
       }
     });

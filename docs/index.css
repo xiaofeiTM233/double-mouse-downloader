@@ -1,0 +1,356 @@
+:root {
+  --theme-color: #2c9fff;
+  --text-default-color: rgb(15, 23, 42);
+}
+
+a {
+  color: var(--theme-color);
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+body {
+  --transparent: rgba(255, 255, 255, 0);
+  --color: rgba(50, 158, 251, 0.1);
+  background: linear-gradient(
+    45deg,
+    var(--transparent) 0%,
+    var(--transparent) 10%,
+    var(--color) 15%,
+    var(--transparent) 20%,
+    var(--transparent) 30%,
+    var(--color) 40%,
+    var(--transparent) 50%,
+    var(--transparent) 70%,
+    var(--color) 80%,
+    var(--transparent) 90%,
+    white
+  );
+  background-attachment: fixed;
+}
+
+.main {
+  max-width: 1920px;
+  margin: auto;
+}
+
+/**
+ * ============ header ============
+ */
+
+.header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.header-logo {
+}
+
+.header-logo-img {
+  width: 2em;
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+
+.header-logo-title {
+  font-size: 1.5em;
+  vertical-align: middle;
+  color: var(--text-default-color);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav > a {
+  text-decoration: none;
+  transition: color 0.2s;
+  color: var(--text-default-color);
+}
+
+.header-nav > a:hover {
+  color: var(--theme-color);
+}
+
+/**
+ * ============ page-banner ============
+ */
+
+.page-banner {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.banner-carousel-box {
+  max-width: 50em;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.banner-carousel-box img {
+  width: 100%;
+}
+
+.banner-title-download {
+  display: flex;
+  justify-content: space-around;
+}
+
+.banner-title {
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.banner-title h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.banner-title del {
+  color: #ccc;
+}
+
+/* 下载按钮 */
+.banner-title-download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.5em 0;
+  width: 18em;
+  margin-right: 1em;
+  border-radius: 1em;
+}
+
+.banner-title-download-button:last-child {
+  margin-right: 0;
+}
+
+.banner-title-download-button .icon {
+  font-size: 3em;
+  margin-right: 0.5em;
+}
+
+.banner-title-download-button .text span {
+  font-size: 2em;
+  display: block;
+}
+
+.banner-title-download-button .text span.description {
+  font-size: 1em;
+}
+
+#download-windows {
+  color: #2c9fff;
+  border: 2px solid #2c9fff;
+}
+
+#download-windows.recommend {
+  color: white;
+  background-color: #2c9fff;
+}
+
+#download-macos {
+  color: var(--text-default-color);
+  border: 2px solid var(--text-default-color);
+}
+
+#download-macos.recommend {
+  color: white;
+  background-color: var(--text-default-color);
+}
+
+.banner-title-not-supported-tip {
+  display: none;
+  color: red;
+  margin-top: 1em;
+}
+
+.banner-title-not-supported-tip.show {
+  display: block;
+}
+
+/**
+ * ============ page-other ============
+ */
+
+.page-other {
+  min-height: 100vh;
+  padding: 5em;
+}
+
+.page-other > section {
+  margin-bottom: 15em;
+}
+
+.other-title {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  margin: 0;
+  gap: 2em 1em;
+  list-style: none;
+}
+
+.features-list > li {
+  display: flex;
+  margin: 0;
+  padding: 1em;
+  background-color: white;
+  border: 1px solid #fafafa;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5em;
+  font-size: 1.5em;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.features-list > li > span {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.features-list > li > span:first-child > i {
+  display: inline-block;
+  color: #bd4c3e;
+  animation-name: rotate;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.resources-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resources-list > li {
+  margin: 0;
+  background-color: white;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 1em;
+  padding: 2em;
+}
+
+.resources-list > li > h2 {
+  margin-bottom: 1em;
+}
+
+.resources-list img {
+  width: 100%;
+}
+
+/**
+ * ============ footer ============
+ */
+
+.footer {
+  padding: 1em 2em;
+  text-align: center;
+}
+
+@media screen and (max-width: 1700px) {
+  .page-banner {
+    flex-direction: column;
+    padding-top: 20vh;
+    margin-bottom: 10vh;
+  }
+
+  .banner-carousel-box {
+    margin-top: 20vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .banner-title-download {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-title-download > a {
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  .page-other .features-list {
+    display: block;
+  }
+
+  .page-other .features-list > li {
+    margin-bottom: 1em;
+  }
+
+  .page-other .resources-list {
+    display: block;
+  }
+
+  .page-other .resources-list > li {
+    margin-bottom: 2em;
+  }
+
+  .banner-title-not-supported-tip {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-title h1 {
+    padding: 0 1em;
+    font-size: 2em;
+  }
+
+  .banner-title-download-button {
+    font-size: 0.8em;
+  }
+  .banner-carousel-box {
+    border-radius: 0.5em;
+    width: 90vw;
+  }
+
+  .page-other {
+    padding: 0 2em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header-logo-img {
+    width: 1.5em;
+  }
+  .header-logo-title {
+    font-size: 1em;
+  }
+  .page-other > section {
+    margin-bottom: 7em;
+  }
+  .page-other .features-list > li {
+    font-size: 1em !important;
+  }
+
+  .page-other .resources-list > li {
+    padding: 1em;
+    border-radius: 0.5em;
+  }
+}

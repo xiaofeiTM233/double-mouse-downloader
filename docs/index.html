@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鼠鼠下载器——跨平台哔哩哔哩资源下载工具</title>
+    <link
+      rel="icon"
+      href="https://pic.imgdb.cn/item/62dd2f0df54cd3f9371c4c01.png"
+    />
+    <meta
+      name="description"
+      content="鼠鼠下载器是一个跨平台的哔哩哔哩资源下载工具，目前支持 Windows 和 MacOS 平台，可以一键下载包括但不限于哔哩哔哩的视频、番剧等资源。"
+    />
+    <meta name="author" content="MoyuScript<i@moyu.moe>" />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+
+    <script
+      src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js"
+      defer
+    ></script>
+    <script src="./index.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-logo">
+        <img
+          class="header-logo-img"
+          src="https://pic.imgdb.cn/item/62dd2f0df54cd3f9371c4c01.png"
+          alt="logo"
+        />
+        <span class="header-logo-title">鼠鼠下载器</span>
+      </div>
+      <nav class="header-nav">
+        <a
+          href="https://github.com/MoyuScript/double-mouse-downloader"
+          target="_blank"
+        >
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="page-banner" id="page-banner">
+        <div class="banner-title-box">
+          <section class="banner-title">
+            <h1>跨平台哔哩哔哩资源下载器</h1>
+            <p><del>鼠鼠我啊，是真的生气了（）</del></p>
+          </section>
+          <section class="banner-title-download">
+            <!-- class: recommend 高亮按钮 -->
+            <a
+              id="download-windows"
+              class="banner-title-download-button"
+              target="_blank"
+              href="https://github.com/MoyuScript/double-mouse-downloader/releases"
+            >
+              <span class="icon">
+                <i class="fa-brands fa-windows"></i>
+              </span>
+              <span class="text">
+                <span>Windows</span>
+                <span class="description">7/10/11 (x64)</span>
+              </span>
+            </a>
+            <a
+              id="download-macos"
+              class="banner-title-download-button"
+              target="_blank"
+              href="https://github.com/MoyuScript/double-mouse-downloader/releases"
+            >
+              <span class="icon">
+                <i class="fa-brands fa-apple"></i>
+              </span>
+              <span class="text">
+                <span>MacOS</span>
+                <span class="description">Apple 芯片</span>
+              </span>
+            </a>
+          </section>
+          <!-- class: show 显示 -->
+          <section
+            class="banner-title-not-supported-tip"
+            id="not-supported-tip"
+          >
+            <p>* 目前暂不支持你的设备。</p>
+          </section>
+        </div>
+        <section aria-label="程序截图轮播图" class="banner-carousel-box">
+          <div
+            id="carousel-screenshots"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://pic.imgdb.cn/item/62dd3422f54cd3f93739620a.jpg"
+                  alt="程序截图 1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://pic.imgdb.cn/item/62dd3422f54cd3f937396293.jpg"
+                  alt="程序截图 2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://pic.imgdb.cn/item/62dd3422f54cd3f937396202.jpg"
+                  alt="程序截图 3"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://pic.imgdb.cn/item/62dd3422f54cd3f9373961fc.jpg"
+                  alt="程序截图 4"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://pic.imgdb.cn/item/62dd3422f54cd3f9373961f8.jpg"
+                  alt="程序截图 5"
+                />
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carousel-screenshots"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">上一张</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carousel-screenshots"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">下一张</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="page-other" id="page-other">
+        <section class="features">
+          <h1 class="other-title">特性</h1>
+          <ul class="features-list">
+            <li>
+              <span><i class="fa-solid fa-clover"></i></span>
+              <span>跨平台。</span>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-clover"></i></span>
+              <span>可选绿色版，解压即用。</span>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-clover"></i></span>
+              <span
+                >使用
+                <a target="_blank" href="https://github.com/aria2/aria2"
+                  >Aria2</a
+                >
+                下载，速度飞快。</span
+              >
+            </li>
+            <li>
+              <span><i class="fa-solid fa-clover"></i></span
+              ><span>四种登录方式（二维码、密码、短信、Cookie）</span>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-clover"></i></span
+              ><span>可使用代理。</span>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-clover"></i></span
+              ><span>一键解析番剧/电视剧/电影等。</span>
+            </li>
+          </ul>
+        </section>
+        <section class="resources">
+          <h1 class="other-title">当前支持的资源</h1>
+          <ul class="resources-list">
+            <li>
+              <h2>视频</h2>
+              <p>
+                <img
+                  src="https://pic.imgdb.cn/item/62dd3422f54cd3f937396293.jpg"
+                  alt="视频资源搜索页截图"
+                />
+              </p>
+            </li>
+            <li>
+              <h2>番剧/电视剧/电影</h2>
+              <p>
+                <img
+                  src="https://pic.imgdb.cn/item/62dd3422f54cd3f9373961f8.jpg"
+                  alt="番剧资源搜索页截图"
+                />
+              </p>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        © 2022 <a target="_blank" href="https://www.moyu.moe/">MoyuScript</a>
+      </p>
+    </footer>
+  </body>
+</html>

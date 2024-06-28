@@ -1,6 +1,6 @@
 {
   "name": "double-mouse-downloader",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "鼠鼠下载器——跨平台哔哩哔哩视频下载工具。",
   "main": "./build/main/main.js",
   "private": "true",
@@ -56,6 +56,7 @@
     "lint-staged": "^13.0.1",
     "nodemon": "^2.0.16",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.7.3",
     "vite": "^2.9.10"
